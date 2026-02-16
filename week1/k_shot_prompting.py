@@ -7,7 +7,16 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+
+ You were given a word. 
+ Write the word spelled backwards.
+ Remember position of its every letter.
+ Output only the new word.
+ Do not add any extra letters.
+ Do not add anhy extra symbols.
+
+"""
 
 USER_PROMPT = """
 Reverse the order of letters in the following word. Only output the reversed word, no other text:
