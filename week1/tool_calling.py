@@ -70,7 +70,22 @@ TOOL_REGISTRY: Dict[str, Callable[..., str]] = {
 # ==========================
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+
+Your task is to call the tool exactly once with a JSON object that contains:
+
+- "tool": the name of the tool
+- "args": a dictionary of keyword arguments for the tool
+
+The tool you must call is "output_every_func_return_type", which optionally accepts:
+- "file_path": a string path to a Python file. If not provided, default to the current file.
+
+Important:
+- Return ONLY valid JSON, no explanations, no text, no code fences.
+- Always include both "tool" and "args" keys.
+- For "args", if you do not want to specify file_path, set it as an empty string.
+
+"""
 
 
 def resolve_path(p: str) -> str:
