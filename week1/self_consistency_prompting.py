@@ -9,7 +9,20 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in! Try to get as close to 100% correctness across all runs as possible.
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+
+Do all the stages of actions i will give you in the next few sentences.
+Do mot change anything. 
+
+You received a number 60.
+Then you have to subtract 20 from 60. 
+Then you have to subtract 15 from the previous number you got.
+Finally output the result in format "Answer: <number>".
+
+
+
+
+"""
 
 USER_PROMPT = """
 Solve this problem, then give the final answer on the last line as "Answer: <number>".
