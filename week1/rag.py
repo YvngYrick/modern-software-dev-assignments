@@ -37,7 +37,18 @@ QUESTION = (
 
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+
+You receive an API file. 
+Use only information provided in CONTEXT section.
+Use only URL that is present.
+Extract only the last fenced Python code block, nothing else.
+Include the /users/ endpoint in the request.
+Send the authentication header exactly as documented (e.g., X-API-Key).
+Call response.raise_for_status().
+Return only the user's name as a string.
+"""
+
 
 
 # For this simple example
